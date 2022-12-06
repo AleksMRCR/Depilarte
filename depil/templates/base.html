@@ -1,0 +1,169 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>{% block titulo %}  {% endblock %}</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+
+<body style='bg-color-primary'>
+    <div class="container-fluid">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-5">
+          <nav class="navbar bg-light fixed-top p-2 mb-5">
+            <div class="container-fluid">
+              <a class="navbar-brand shadow rounded p-2" href="{% url 'home' %}">
+                <img src="https://lh3.googleusercontent.com/AMGMWf02QmTNCRFdusPjDLbBgQNRzQiZlLwnipPtYJFOBj93wvcu30CqNYIHN1HFF6jT2vmj9X8ThV-3TIy9HzIvGjUQTEBKOGDouEwP7OW0WTIZplR8k-79JkcJWsxfd3t2ujhK6XoIs7B1OS_VcTCK-voa5nsoN69QLg2jrovLq0U0s5db4uFEvcAflOZ8vvKiRuEWFPsCr0BhrE4VPK63fQ-vpenbMjYgdebloIqpAHPRXyHeLnbjf7B4sCvk0TFD-1fdeqR9mXeMQRSWnIXM2ju0R6ZPUTUmW-zJelL3lgrwPR4_VuMCP54Z_8ozQ0silkD33bcT3HP9US9rD1WjWAdcRzfXl1xmVpeAQQ7gd_Fstem01LyhH3P4a7DaM7MwMd5So_jnK-6RlxRA5TH7T6NOf2_cB14MWiIzJ_5xV-hVSteY4Mj320p8VTLsWyPg4UwUJaY-eAKtc82baKAO7_VZsgD9OaHwRTNq51tehyMyeZmWYna2oOjXh4r7FDgYIaTlrdt8CcFifVooHAfkOEwzoGOA-m8Iz5KJBhQCYWL-ANtzKOK9GuRN8pYhWXJN_RVcq-bqzrRFV9_q02oqmmUlmu6WFih85060mhngV7mXRIYD9pH-tHNcZSlCZAoBu3Nu_n-6VfOo1WhO0YDik4XkJXUubVu-1viEOCDcD_-2MDWu1TlDwZFdXZzKMSpqakH0PRqkz8zBBDiKQF9HvHEnYqMaf-l57-5HMguXa5lv_C3G1kTEjIA4BaN9_vxNgWCKQoxsDtkLWVaqYYNq-roC3DH0tGSXbuXldvbGXvrFJRhtFj_gfkOspTpqt8LIgaVMyTBXUrSF9ogkL1Rw5MEsZp-sUN7_NNjUxfxZjBOUQ6TZchQMnG1WKOlUUtmGaqzhD_OY74H2JwQJIQ3iJMS44DE2tw7c875vt4V_yigJ4FMGhjyJsBg_a4RrCFCiGV8tjOijCReXAVMZ5gIUaGo0-DD7txe9RvXfJ1z09lpKP0E4dAp0=w902-h298-no?authuser=1" alt="Bootstrap" width="120" height="50">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Items</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'nosotros' %}">Quienes Somos</a>
+                    </li>
+                    <br>
+                    <li class="nav-item">
+                      <a name="" id="" class="btn btn-success" href="{% url 'hora' %}" role="button">Solicita tu hora</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+    </div>
+  <main>
+
+    <div class="container mt-5">
+      <div class="row justify-content-center align-items-center g-2 mt-5">
+        {% block contenido %}  {% endblock %}
+      </div>
+    </div>
+    
+  </main>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted mt-4">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Nuestras redes y contacto directo: </span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Depil-arte
+          </h6>
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Navegación
+          </h6>
+          <p>
+            <a href="{% url 'home' %}" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="{% url 'nosotros' %}" class="text-reset">Nosotros</a>
+          </p>
+          <p>
+            <a href="{% url 'servicios' %}" class="text-reset">Servicios</a>
+          </p>
+          <p>
+            <a href="{% url 'crear' %}" class="text-reset">Pide tu hora</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+      
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+          <p><i class="fas fa-home me-3"></i>Av.Providencia 1388 local 17, a pasos de metro Manuel Montt, vereda norte </p>
+          <p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d822.8933123733873!2d-70.61936835744173!3d-33.42795116557361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9bb9e1d23d5d349d!2zMzPCsDI1JzQwLjMiUyA3MMKwMzcnMDguOCJX!5e0!3m2!1ses!2scl!4v1670272064797!5m2!1ses!2scl" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 56 9 7616 5284</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 Proyecto de titulo (en desarrollo)
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+  </script>
+</body>
+
+
+
+</html>
