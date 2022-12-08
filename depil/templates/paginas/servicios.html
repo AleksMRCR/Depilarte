@@ -1,26 +1,40 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block titulo %} Servicios {% endblock %}
 
 {% block contenido %} 
 
-{% for item in prof %}
 
-  <div class="card mb-3 shadow p-3 m-5 bg-body rounded">
+  <div class="card mb-3 shadow p-3 m-5 bg-body rounded-4">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="..." class="img-fluid rounded-start" alt="...">
+        <img src="{% static "img/mari.jpg" %}" class="img-fluid rounded-4" width="75%">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{item.nombre}} {{item.apellido}}</h5>
-          <p class="card-text">{{item.ocupacion}}</p>
-          <p class="card-text"><small class="text-muted">Para contactar llene el formulario o llame al numero {{item.telefono}}</small></p>
+          <h5 class="card-title">Maritsa Tapia</h5>
+          <p class="card-text">Encargada de servicios de podología y reflexología</p>
+          <p class="card-text"><small class="text-muted">Para contactar llene el formulario o llame al numero</small></p>
         </div>
       </div>
     </div>
   </div>
 
-{%endfor%}
+  <div class="card mb-3 shadow p-3 m-5 bg-body rounded-4">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{% static "img/sole.jpg" %}" class="img-fluid rounded-4" width="75%" >
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Solange Valladares</h5>
+          <p class="card-text">Encargada de servicios  de Depilación</p>
+          <p class="card-text"><small class="text-muted">Para contactar llene el formulario o llame al numero </small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 {% endblock %}
