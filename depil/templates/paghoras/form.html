@@ -1,17 +1,11 @@
 <form enctype = "multipart/form-data" method = "POST" class="m-4">
   {% csrf_token %} 
-
     <div class="mb-2">
       {{formulario.as_p}}
     </div>
 
-  
   <div class="d-grid gap-2 d-md-flex justify-content-md-end m-4">
     <input name="" id="" class="btn btn-success" type="submit" value="Enviar informacion">
-    <a name="" id="" class="btn btn-danger" href="{% url 'hora' %}" role="button">Cancelar</a>
+    <a name="" id="" class="btn btn-danger" href="{% url 'home' %}" role="button">Cancelar</a>
   </div>
-  
-
-
-
 </form>

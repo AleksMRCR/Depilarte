@@ -2,8 +2,7 @@ from django.shortcuts import redirect, render
 from django.conf import settings
 from .models import *
 from .forms import *
-from django.template.loader import get_template
-from django.core.mail import EmailMultiAlternatives,EmailMessage
+from django.core.mail import EmailMessage
 
 
 
@@ -51,8 +50,6 @@ def pedir_hora (request):
 
 
 
-def hora (request):
-    horas = Atencion.objects.all()
-    return render(request, 'paghoras/index.html', {'horas': horas} )
+
 
 
