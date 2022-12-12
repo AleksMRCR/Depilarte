@@ -1,16 +1,19 @@
 {% extends "base.html" %}
+{% load static %}
 
 
 {% block titulo %} Nosotros {% endblock %}
 
 {% block contenido %} 
 
-<div class='container-fluid m-4'>
-    <h3>Depil-arte</h3>
-    <p>Es un emprendimiento profesional, dedicado al servicio de la podología clínica reconocida por el ministerio de salud
+
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold"><img class="d-block mx-auto mb-4" src="{% static 'img/logo.png' %}" alt="" width="500" height="200"></h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Es un emprendimiento profesional, dedicado al servicio de la podología clínica reconocida por el ministerio de salud
         , capacitados para evaluar diagnosticar y entregar tratamientos personalizados, según las patologías de cada paciente.
-        El compromiso con el público es entregar nuestra experiencia con una atención personalizada, aportando bienestar y orientación.
-    </p>
-</div>
+        El compromiso con el público es entregar nuestra experiencia con una atención personalizada, aportando bienestar y orientación.</p>
+    </div>
+  </div>
 
 {% endblock %}
