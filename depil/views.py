@@ -45,7 +45,7 @@ def pedir_hora (request):
         aviso.send()
 
 
-        return redirect('hora')
+        return redirect('home')
     return render(request, 'paghoras/crear.html', {'formulario': formulario} ) 
 
 
